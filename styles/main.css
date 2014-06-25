@@ -18,14 +18,96 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%;}
 
-h1 { margin-bottom: 1em; }
+h1 {margin-top: 1em;}
+
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a { 
+  color: #333; 
+}
+
+a:hover { 
+  text-decoration: none; 
+  background: #999; 
+  text-transform: all .2s;
+}
+
+*, *:after, *:before {
+  /*set box model to maintain box width despite padding*/
+  box-sizing:border-box;
+}
+
+body {
+
+}
+
+.wrapper{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.grid:after {
+  /*clearfix to extend parent around floated content*/
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.grid .grid {
+  /* nested grids will over write first column left padding and left column right padding to keep nested content flush with parent content */
+  margin:0 -20px;
+}
+
+[class*="column"] {
+  float:left;
+  padding: 0 20px; /* gutter to the left and right of columns */
+  min-width: 1px;  /* prevent empty columns from collapsing */
+}
+
+.column-1-12{width:8.33333333333%;}
+
+.column-2-12{width:16.6666666666%;}
+
+.column-3-12{width:25%;}
+           
+.column-4-12{width:33.3333333333%;}
+
+.column-5-12{width:41.66%;}
+
+.column-6-12{width:50%;}
+
+.column-7-12{width:58.33%;}
+
+.column-8-12{width:66.66%;}
+
+.column-9-12{width:75%}
+
+.column-10-12{width:83.33%;}
+
+.column-11-12{width:91.66%;}
+
+.column-12-12{width:100%;}
+
+/* ----- breakpoint for mobile ----- */
+@media only screen and (max-width: 700px) {
+  /*check to see if the browser is smaller than 700px, and if so make all elements with a class containing 'column' 100% wide so that the columns stack on top of one another*/
+  [class*="column"] {
+  width:100%;
+  margin-bottom: 20px;
+  }
+} 
+
+
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 /*****************************************************************************/
 /*
@@ -60,16 +142,29 @@ footer {
   line-height: 2.25em;
   color: #333;
   background: #ccc;
-  padding: 20px 20px 40px 28px;
+  padding: 20px 0 40px 0;
 }
 
-footer a {color: #333;}
-footer a:hover {text-decoration: none; background: #999;}
-address, footer section {float:left; width: 15%; margin-right:5%;}
-address {width: 50%;}
+footer ul {
+  list-style-type:none; 
+  line-height: 1.5em;
+}
 
-footer ul {list-style-type:none; line-height: 1.5em;}
+.photo {
+  display: none;
+}
 
+.adr {
+  display: inline;
+}
+
+.small {
+  font-size: .9em;
+}
+
+.social {
+  font-size: 24px;
+}
 
 /*****************************************************************************/
 /*

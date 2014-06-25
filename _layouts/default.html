@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/styles/syntax.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/styles/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/styles/main.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
 
-    </head>
-    <body>
-
-          <header>
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </header>
-
-          {{ content }}
-
-          <footer>
-            <address class="vcard">
-              <a class="url fn" href="http://elladurham.com">Ella Durham</a>
-              <img class="photo" src="http://www.elladurham.com/images/ella-durham.jpg" alt="Ella Durham" width="100" height="100">
-              <a class="email" href="mailto:hello@elladurham.com">hello@elladurham.com</a>
-              <div class="adr">
-                <span class="locality">Lincoln</span>, 
-                <span class="region">Nebraska</span>
-                <span class="country-name">United States</span>
-              </div>
-              <a href="tel://1-650-307-5191" class="tel">+1 (650) 307-5191</a>
-              <p class="note">Ella Durham is an interdisciplinary designer and artist, maker, and technophile working and living in Lincoln, Nebraska. She is currently planting, nurturing, and celebrating trees one pixel at a time at the Arbor Day Foundation. When not in the office or home studio she can be found working with local, cause-oriented groups or attempting to be permaculturally handy.</p>
-            </address>
-            <section>
-              <h6>Current Facinations</h5>
-              <ul>
-                <li><a href="http://www.indiewebcamp.com">IndieWeb</a></li>
-                <li><a href="http://make.unl.edu">UNL Maker Club</a></li>
-                <li><a href="http://www.reddit.com/r/dogecoin">Dogecoin</a></li>
-                <li>Beekeeping</li>
-                <li>Unschooling</li>
-              </ul>
-            </section>
-            <section>
-              <h6>Initiatives I &lt;3 </h5>
-              <ul>
-                <li><a href="http://strikedebt.org/">Strike Debt</a></li>
-                <li><a href="http://southernheightsff.org/">Southern Heights Food Forest</a></li>
-              </ul>
-            </section>
-          </footer>
-
-    </body>
+    <!-- foundation icons -->
+    <link rel="stylesheet" href="/styles/foundation-icons.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="grid">
+        <header class="column-12-12">
+          <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+        </header>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="grid">
+        {{ content }}
+      </div>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <div class="grid">
+          <address class="vcard column-6-12">
+            <p class="note"><strong>Ella Durham</strong> is an interdisciplinary designer and artist, maker, and internet junkie based out of Lincoln, Nebraska. She is currently teaching web in the <b>Graphic Design &#124; Media Arts</b> program and working as an independent designer. When not in the classroom or home studio she can be found working with local, cause-oriented groups or falling head first into her current facinations.</p>
+            <a class="url fn" href="http://elladurham.com">Ella Durham</a> &#124; 
+            <img class="photo" src="http://www.elladurham.com/images/ella-durham.jpg" alt="Ella Durham" width="100" height="100"> 
+            <a class="email" href="mailto:hello@elladurham.com">hello@elladurham.com</a> &#124; 
+            <div class="adr">
+              <span class="locality">Lincoln</span>, 
+              <span class="region">Nebraska</span>
+              <span class="country-name">United States</span>
+            </div> &#124; 
+            <a href="tel://1-650-307-5191" class="tel">+1(650)307-5191</a> &#124; 
+            <a href="/documents/ella-durham.vcf">vCard</a>
+            <div class="social">
+              <a href="http://www.linkedin.com/in/elladurham" rel="me"><i class="fi-social-linkedin"></i></a>&nbsp;
+              <a href="https://twitter.com/elladurham" rel="me"><i class="fi-social-twitter"></i></a>&nbsp;
+              <a href="https://github.com/helloella" rel="me"><i class="fi-social-github"></i></a>&nbsp;
+              <a href="https://plus.google.com/+EllaDurham" rel="me"><i class="fi-social-google-plus"></i></a>&nbsp;
+              <a href="https://facebook.com/ella.durham" rel="me"><i class="fi-social-facebook"></i></a>
+              <a href="http://dribbble.com/EllaDurham" rel="me"><i class="fi-social-dribbble"></i></a>
+            </div>
+          </address>
+          <section class="column-2-12">
+            <h6>Things I Contribute to</h6>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/thegrowingplacenebraska">The Growing Place</a><br>
+                <span class="small">(board member)</span>
+              </li>
+              <li>
+                <a href="http://www.blackcathouse.org">Black Cat House</a><br>
+                <span class="small">(collective cohort)</span>
+              </li>
+              <li>
+                <a href="http://docs.webplatform.org/wiki/User:Ella.durham">Web Platform Docs</a><br>
+                <span class="small">(novice)</span>
+              </li>
+            </ul>
+          </section>
+          <section class="column-2-12">
+            <h6>Some of my Projects</h6>
+            <ul>
+              <li><a href="http://www.occupytogether.org">Occupy Together</a></li>
+              <li><a href="http://vimeo.com/jointhesearchers">Join the Searchers</a></li>
+              <li><a href="http://www.thelichen.com">The Lichen</a></li>
+            </ul>
+          </section>
+          <section class="column-2-12">
+            <h6>Much &amp;hearts&#59;</h6>
+            <ul>
+              <li><a href="http://lnkcodingwomen.org/">#LNK Coding Women</a></li>
+              <li><a href="http://southernheightsff.org/">Southern Heights Food Forest</a></li>
+              <li><a href="http://strikedebt.org/">Strike Debt</a></li>
+              <li><a href="http://www.indiewebcamp.com">IndieWeb</a></li>
+              <li>Beekeeping</li>
+              <li>Unschooling</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
